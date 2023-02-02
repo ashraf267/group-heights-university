@@ -66,7 +66,8 @@
             #navbar ul li a {
                 text-decoration: none;
                 padding: 1px 5px;
-                color: white;
+                /* add color here */
+                border: 1px solid black;
             }
 
             .post-header {
@@ -114,6 +115,23 @@
         <script>
             // todo
             console.log("Hello World!");
+
+            var item1 = document.getElementById('navbar');
+            var item2 = document.getElementById('navbar-btn');
+
+            function openNav() {
+                item1.style.display = "block";
+                item2.innerHTML = "&#9747;";
+
+                console.log("nav opened!");
+            }
+
+            function closeNav() {
+                item1.style.display = "none";
+                item2.innerHTML = "&#9776;";
+
+                console.log("nav closed!");
+            }
         </script>
     </body>
 </html>
