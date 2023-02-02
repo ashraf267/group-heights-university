@@ -4,7 +4,20 @@
         <title>Undergraduate Admissions | GHTU</title>
     </head>
     <body>
-        <!-- TODO: create an Apply Now button and style it -->
-        <!-- category will be added later -->
+        <!-- TODO: setup the basic front-end template -->
+        <div id="header">
+            <p id="wordmark">ghtu</p>
+            <!-- the hamburger &#9776; html symbol should be substituted with a proper hamburger icon from fontawesome -->
+            <button onclick="(this.innerHTML == '&#9776;') ? openNav() : closeNav();" id="navbar-btn">&#9776;</button>
+            <div id="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Admissions</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
