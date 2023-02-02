@@ -6,11 +6,92 @@
         <script src="https://kit.fontawesome.com/c84a86a0b9.js" crossorigin="anonymous"></script>
         <style>
             /* todo */
+            /* note: at the time of writing this code (02/02/23), this site is not fully responsive */
+            /* note: 8 out of 10 times, I use borders to debug */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .header {
+                border: 1px solid black;
+                width: 100%;
+                height: auto;
+                position: fixed;
+                top: 0;
+                padding: 5px 1px 0;
+                /* add background-color here */
+            }
+
+            #wordmark {
+                text-transform: uppercase;
+                float: left;
+                border: 2px solid black;
+                font-size: 26px;
+                font-weight: bold;
+                /* add font-family here */
+                padding: 5px;
+                /* add color here */
+                letter-spacing: 2px;
+            }
+
+            #navbar-btn {
+                float: right;
+                position: relative;
+                right: 10px;
+                font-size: 28px;
+                background-color: transparent;
+                border: none;
+                font-weight: bold;
+            }
+
+            #navbar {
+                /* add background-color here */
+                display: none;
+                /* later, I'd like to add a transition property here */
+            }
+
+            #navbar ul {
+                border: 1px solid red;
+                margin-top: 50px;
+                text-align: center;
+                list-style-type: none;
+            }
+
+            #navbar ul li {
+                font-size: 25px;
+                margin: 20px 1px;
+            }
+
+            #navbar ul li a {
+                text-decoration: none;
+                padding: 1px 5px;
+                color: white;
+            }
+
+            .post-header {
+                border: 1px solid black;
+                position: relative;
+                z-index: -1;
+                top: 50px;
+                width: 100%;
+                /* add background-color here */
+            }
+
+            /* styles for the middle contents comes here */
+
+            /* footer */
+            .footer {
+                border: 1px solid black;
+                position: relative;
+                top: 51px;
+                /* add background-color here */
+            }
         </style>
     </head>
     <body>
         <!-- TODO: setup the basic front-end template -->
-        <div class="header">
+        <div class="header"> <!-- this header is a fixed header -->
             <p id="wordmark">ghtu</p>
             <!-- the hamburger &#9776; html symbol should be substituted with a proper hamburger icon from fontawesome -->
             <button onclick="(this.innerHTML == '&#9776;') ? openNav() : closeNav();" id="navbar-btn">&#9776;</button>
