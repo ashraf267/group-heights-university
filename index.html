@@ -70,16 +70,55 @@
                 border: 1px solid black;
             }
 
-            .post-header {
+            #post-header {
                 border: 1px solid black;
                 position: relative;
-                z-index: -1;
                 top: 50px;
                 width: 100%;
+                z-index: -1;
                 /* add background-color here */
             }
 
             /* styles for the middle contents comes here */
+            .center-box {
+                border: 1px solid red;
+                width: 50%;
+                margin: 5px auto;
+                text-align: center;
+            }
+
+            .action-btn {
+                text-transform: uppercase;
+                text-decoration: none;
+                text-align: center;
+                color: #567189;
+                background-color: #FAD6A5;
+                font-size: 20px;
+                font-weight: bold;
+                border-left: 5px solid #567189;
+                transition: color 1s, background-color 1s;
+                display: inline-block;
+                padding: 14px 25px;
+            }
+
+            .action-btn:hover {
+                background-color: #567189;
+                color: #FAD6A5;
+            }
+
+            #banner {
+                border: 1px solid black;
+                background-color: #7B8FA1;
+                padding: 10px 10px 0;
+            }
+
+            #banner .children{
+                color: white;
+                border: 1px solid red;
+                text-align: center;
+                margin: 2px 5px;
+                padding: 5px;
+            }
 
             /* footer */
             .footer {
@@ -100,7 +139,79 @@
                 font-size: 45px;
                 font-weight: bold;
             }
-            
+
+            #icon-emails {
+                border: 1px solid green;
+                padding: 2px 3px;
+            }
+
+            #icon-emails span {
+                border: 1px solid red;
+                display: block;
+                margin: 5px 1px;
+            }
+
+            #icon-emails span i {
+                border: 1px solid black;
+                padding: 1px;
+                margin-right: 4px;
+            }
+
+            .sm-icons {
+                padding: 6px 3px;
+                border: 1px solid red;
+            }
+
+            .sm-icons h4 {
+                border: 1px solid black;
+                margin: 2px 0 10px;
+                text-transform: capitalize;
+                font-weight: normal;
+            }
+
+            .sm-icons a {
+                color: black;
+                display: inline-block;
+                border: 1px solid black;
+                margin: 0 2px;
+            }
+
+            .sm-icons a i {
+                font-size: 25px;
+            }
+
+            #links-x2 {
+                border: 2px solid red;
+                padding: 4px 1px;
+            }
+
+            #links-x2 h3 {
+                border: 1px solid black;
+                font-weight: normal;
+                text-transform: capitalize;
+                margin: 1px;
+            }
+
+            #links-x2 ul {
+                border: 1px solid black;
+                margin: 2px 10px;
+            }
+
+            #links-x2 ul li {
+                border-bottom: 1px dotted grey;
+                padding: 10px 0;
+                list-style-type: none;
+            }
+
+            #links-x2 ul li a {
+                border: 1px solid black;
+                text-decoration: none;
+                text-transform: capitalize;
+                font-size: 16px;
+                color: black;
+                /* add a grey color border-bottom */
+            }
+
             .footer #cpyrt-wrapper {
                 /* add background-color here */
                 border: 1px solid red;
@@ -132,14 +243,47 @@
                 </ul>
             </div>
         </div>
-        <div class="post-header">
+        <div id="post-header">
             <!-- every content between the header and footer comes here -->
-            <h1>Admissions</h1>
+            <div id="banner">
+                <h1 class="children" style="font-size: 40px;">Undergraduate Admissions</h1>
+                <h2 class="children">App. Fee Free February</h2>
+                <p class="children">Apply for undergrad admissions for free from FEB 01 to FEB 15 using: <em>UGfreeFEB</em></p>
+                <div class="center-box">
+                    <a href="#" class="action-btn">apply now</a>
+                </div>
+            </div>
+            <!-- apply now button -->
+            <div class="center-box">
+                <a href="#" class="action-btn">apply now</a>
+            </div>
         </div>
         <div class="footer">
             <div class="logomark">
                 <span id="logomark-abbr">ghtu</span>
                 <span id="logomark-txt">Groupheights<br><span>Technical University</span></span>
+            </div>
+            <div id="icon-emails">
+                <span><i class="fa-regular fa-envelope"></i><small>info@groupheightstech.edu.ng</small></span>
+                <span><i class="fa-regular fa-envelope"></i><small>admissions@groupheightstech.edu.ng</small></span>
+            </div>
+            <div class="sm-icons">
+                <h4>Connect with us</h4>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div id="links-x2">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">admissions</a></li>
+                    <li><a href="#">available courses</a></li>
+                    <li><a href="#">tuition fees</a></li>
+                    <li><a href="#">schorlaships</a></li>
+                    <li><a href="#">login</a></li>
+                </ul>
             </div>
             <div id="cpyrt-wrapper">
                 <p id="cpyrt">Copyright &copy; 2023 GroupHeights Technical University. All rights reserved</p>
@@ -152,9 +296,11 @@
 
             var item1 = document.getElementById('navbar');
             var item2 = document.getElementById('navbar-btn');
+            var x = document.getElementById('post-header');
 
             function openNav() {
                 item1.style.display = "block";
+                x.style.zIndex = "-1";
                 item2.innerHTML = "&#9747;";
 
                 console.log("nav opened!");
@@ -162,6 +308,7 @@
 
             function closeNav() {
                 item1.style.display = "none";
+                x.style.zIndex = "1";
                 item2.innerHTML = "&#9776;";
 
                 console.log("nav closed!");
