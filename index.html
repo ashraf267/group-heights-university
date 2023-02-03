@@ -116,8 +116,56 @@
                 color: white;
                 border: 1px solid red;
                 text-align: center;
-                margin: 2px 5px;
+                margin: 5px;
+            }
+
+            #banner h1 {
+                padding: 35px 10px;
+                font-size: 40px;
+                text-transform: capitalize;
+            }
+
+            #banner h2 {
+                padding: 10px;
+                text-transform: uppercase;
+            }
+
+            #banner p {
                 padding: 5px;
+            }
+
+            #boxes {
+                border: 1px solid black;
+                padding: 5px 10px;
+                margin: 1px;
+            }
+
+            .box {
+                border: 1px solid red;
+                margin: 10px 5px;
+                padding: 15px 25px;
+            }
+
+            .box h2 {
+                border: 1px solid green;
+                text-align: center;
+                font-size: 30px;
+                padding: 10px 20px;
+                margin: 15px 0;
+            }
+
+            .box a {
+                border: 1px solid red;
+                font-size: 25px;
+                color: black;
+                text-decoration: none;
+                margin: 0 5px;
+            }
+
+            .box a i {
+                border: 1px solid black;
+                margin: 1px;
+                padding: 1px 4px;
             }
 
             /* footer */
@@ -228,6 +276,15 @@
         </style>
     </head>
     <body>
+        <!-- TODOS: list of things to be done -->
+        <!-- list starts here -->
+        <!-- add logo at the top nav -->
+        <!-- edit the school name to Heights Technical University -->
+        <!-- fix the color and background-color wherever necessary -->
+        <!-- separate the html, css, and js files -->
+        <!-- ... -->
+        <!-- list ends here -->
+
         <!-- TODO: setup the basic front-end template -->
         <div class="header"> <!-- this header is a fixed header -->
             <p id="wordmark">ghtu</p>
@@ -246,11 +303,26 @@
         <div id="post-header">
             <!-- every content between the header and footer comes here -->
             <div id="banner">
-                <h1 class="children" style="font-size: 40px;">Undergraduate Admissions</h1>
-                <h2 class="children">App. Fee Free February</h2>
+                <h1 class="children">Undergraduate admissions</h1>
+                <h2 class="children">App. fee free february!</h2>
                 <p class="children">Apply for undergrad admissions for free from FEB 01 to FEB 15 using: <em>UGfreeFEB</em></p>
                 <div class="center-box">
                     <a href="#" class="action-btn">apply now</a>
+                </div>
+            </div>
+            <div id="boxes">
+                <div class="box">
+                    <h2>Steps to apply</h2>
+                    <!-- add a right arrow icon as a link here -->
+                    <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="box">
+                    <h2>Required documents</h2>
+                    <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="box">
+                    <h2>Admissions list - 2023</h2>
+                    <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <!-- apply now button -->
