@@ -18,46 +18,45 @@
         }
 
         .header {
-            border: 1px solid black;
             width: 100%;
             height: auto;
             position: fixed;
             top: 0;
             padding: 5px 1px 0;
             /* add background-color here */
+            background-color: rgba(66, 33, 11, 0.7);
         }
 
-        #wordmark {
-            text-transform: uppercase;
-            float: left;
-            border: 2px solid black;
-            font-size: 26px;
-            font-weight: bold;
-            /* add font-family here */
-            padding: 5px;
-            /* add color here */
-            letter-spacing: 2px;
+        #navbar-logo {
+            text-decoration: none;
         }
 
+        #navbar-logo img {
+            width: 10%;
+            margin: 2px 3px;
+            padding: 2px;
+        }
         #navbar-btn {
             float: right;
             position: relative;
             right: 10px;
-            font-size: 28px;
+            font-size: 29px;
             background-color: transparent;
             border: none;
             font-weight: bold;
+            padding: 1px 2px;
         }
 
         #navbar {
             /* add background-color here */
+            background-color: #42210b;
             display: none;
+            padding: 3px 1px;
+            border-bottom: 2px solid #f7921e;
             /* later, I'd like to add a transition property here */
         }
 
         #navbar ul {
-            border: 1px solid red;
-            margin-top: 50px;
             text-align: center;
             list-style-type: none;
         }
@@ -71,7 +70,7 @@
             text-decoration: none;
             padding: 1px 5px;
             /* add color here */
-            border: 1px solid black;
+            color: #f7921e;
         }
 
         #post-header {
@@ -109,14 +108,12 @@
         }
 
         #banner {
-            border: 1px solid black;
             background-color: #F2CD5C;
-            padding: 50px 10px 0;
+            padding: 50px 10px 5px;
         }
 
         #banner .children {
             color: #42210b;
-            border: 1px solid red;
             text-align: center;
             margin: 5px;
             font-family: 'Montserrat', sans-serif;
@@ -186,6 +183,7 @@
             display: block;
             margin: 5px 1px;
             font-family: 'Montserrat', sans-serif;
+            color: rgba(247, 146, 30, 0.5);
         }
 
         #icon-emails span i {
@@ -202,10 +200,11 @@
             text-transform: capitalize;
             font-weight: normal;
             font-family: 'Montserrat', sans-serif;
+            color: #f7921e;
         }
 
         .sm-icons a {
-            color: #f7921e;
+            color: rgba(247, 146, 30, 0.5);
             display: inline-block;
             margin: 0 2px;
         }
@@ -222,6 +221,7 @@
             text-transform: capitalize;
             margin: 1px;
             font-family: 'Montserrat', sans-serif;
+            color: #f7921e;
         }
 
         #links-x2 ul {
@@ -239,13 +239,14 @@
             text-transform: capitalize;
             font-size: 16px;
             font-family: 'Montserrat', sans-serif;
-            color: #F2CD5C;
+            color: rgba(247, 146, 30, 0.5);
         }
 
         .footer #cpyrt-wrapper {
             /* add background-color here */
             background-color: #f7921e;
             margin: 2px 1px 0;
+            padding: 3px;
         }
 
         .footer #cpyrt-wrapper p {
@@ -254,7 +255,6 @@
             font-family: 'Montserrat', sans-serif;
             text-align: center;
             /* add color here */
-            margin: 10px 5px;
         }
     </style>
 </head>
@@ -271,7 +271,7 @@
 
     <!-- TODO: setup the basic front-end template -->
     <div class="header"> <!-- this header is a fixed header -->
-        <p id="wordmark">ghtu</p>
+        <a id="navbar-logo" href="#"><img src="Asset 3.png"></a>
         <!-- the hamburger &#9776; html symbol should be substituted with a proper hamburger icon from fontawesome -->
         <button onclick="(this.innerHTML == '&#9776;') ? openNav() : closeNav();" id="navbar-btn">&#9776;</button>
         <div id="navbar">
