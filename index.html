@@ -1,385 +1,371 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Undergraduate Admissions | GHTU</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/c84a86a0b9.js" crossorigin="anonymous"></script>
-        <style>
-            /* todo */
-            /* note: at the time of writing this code (02/02/23), this site is not fully responsive */
-            /* note: 8 out of 10 times, I use borders to debug */
-            * {
-                margin: 0;
-                padding: 0;
-            }
 
-            .header {
-                border: 1px solid black;
-                width: 100%;
-                height: auto;
-                position: fixed;
-                top: 0;
-                padding: 5px 1px 0;
-                /* add background-color here */
-            }
+<head>
+    <title>Undergraduate Admissions | GHTU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c84a86a0b9.js" crossorigin="anonymous"></script>
+    <style>
+        /* todo */
+        /* note: at the time of writing this code (02/02/23), this site is not fully responsive */
+        /* note: 8 out of 10 times, I use borders to debug */
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-            #wordmark {
-                text-transform: uppercase;
-                float: left;
-                border: 2px solid black;
-                font-size: 26px;
-                font-weight: bold;
-                /* add font-family here */
-                padding: 5px;
-                /* add color here */
-                letter-spacing: 2px;
-            }
+        .header {
+            border: 1px solid black;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 0;
+            padding: 5px 1px 0;
+            /* add background-color here */
+        }
 
-            #navbar-btn {
-                float: right;
-                position: relative;
-                right: 10px;
-                font-size: 28px;
-                background-color: transparent;
-                border: none;
-                font-weight: bold;
-            }
+        #wordmark {
+            text-transform: uppercase;
+            float: left;
+            border: 2px solid black;
+            font-size: 26px;
+            font-weight: bold;
+            /* add font-family here */
+            padding: 5px;
+            /* add color here */
+            letter-spacing: 2px;
+        }
 
-            #navbar {
-                /* add background-color here */
-                display: none;
-                /* later, I'd like to add a transition property here */
-            }
+        #navbar-btn {
+            float: right;
+            position: relative;
+            right: 10px;
+            font-size: 28px;
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+        }
 
-            #navbar ul {
-                border: 1px solid red;
-                margin-top: 50px;
-                text-align: center;
-                list-style-type: none;
-            }
+        #navbar {
+            /* add background-color here */
+            display: none;
+            /* later, I'd like to add a transition property here */
+        }
 
-            #navbar ul li {
-                font-size: 25px;
-                margin: 20px 1px;
-            }
+        #navbar ul {
+            border: 1px solid red;
+            margin-top: 50px;
+            text-align: center;
+            list-style-type: none;
+        }
 
-            #navbar ul li a {
-                text-decoration: none;
-                padding: 1px 5px;
-                /* add color here */
-                border: 1px solid black;
-            }
+        #navbar ul li {
+            font-size: 25px;
+            margin: 20px 1px;
+        }
 
-            #post-header {
-                border: 1px solid black;
-                width: 100%;
-                z-index: -1;
-                /* add background-color here */
-            }
+        #navbar ul li a {
+            text-decoration: none;
+            padding: 1px 5px;
+            /* add color here */
+            border: 1px solid black;
+        }
 
-            /* styles for the middle contents comes here */
-            .center-box {
-                border: 1px solid red;
-                width: 50%;
-                margin: 5px auto;
-                text-align: center;
-            }
+        #post-header {
+            border: 1px solid black;
+            width: 100%;
+            z-index: -1;
+            /* add background-color here */
+        }
 
-            .action-btn {
-                text-transform: uppercase;
-                text-decoration: none;
-                text-align: center;
-                color: #567189;
-                background-color: #FAD6A5;
-                font-size: 20px;
-                font-weight: bold;
-                border-left: 5px solid #567189;
-                transition: color 1s, background-color 1s;
-                display: inline-block;
-                padding: 14px 25px;
-            }
+        /* styles for the middle contents comes here */
+        .center-box {
+            width: 50%;
+            margin: 5px auto;
+            text-align: center;
+        }
 
-            .action-btn:hover {
-                background-color: #567189;
-                color: #FAD6A5;
-            }
+        .action-btn {
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            color: #42210b;
+            background-color: #f7921e;
+            font-size: 20px;
+            font-weight: bold;
+            border-left: 5px solid #42210b;
+            transition: color 1s, background-color 1s;
+            display: inline-block;
+            padding: 14px 25px;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-            #banner {
-                border: 1px solid black;
-                background-color: #7B8FA1;
-                padding: 50px 10px 0;
-            }
+        .action-btn:hover {
+            background-color: #42210b;
+            color: #f7921e;
+        }
 
-            #banner .children{
-                color: white;
-                border: 1px solid red;
-                text-align: center;
-                margin: 5px;
-            }
+        #banner {
+            border: 1px solid black;
+            background-color: #F2CD5C;
+            padding: 50px 10px 0;
+        }
 
-            #banner h1 {
-                padding: 35px 10px;
-                font-size: 40px;
-                text-transform: capitalize;
-            }
+        #banner .children {
+            color: #42210b;
+            border: 1px solid red;
+            text-align: center;
+            margin: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-            #banner h2 {
-                padding: 10px;
-                text-transform: uppercase;
-            }
+        #banner h1 {
+            padding: 35px 10px;
+            font-size: 40px;
+            text-transform: capitalize;
+        }
 
-            #banner p {
-                padding: 5px;
-            }
+        #banner h2 {
+            padding: 10px;
+            text-transform: uppercase;
+        }
 
-            #boxes {
-                border: 1px solid black;
-                padding: 5px 10px;
-                margin: 1px;
-            }
+        #banner p {
+            padding: 5px;
+        }
 
-            .box {
-                border: 1px solid red;
-                margin: 10px 5px;
-                padding: 15px 25px;
-            }
+        #boxes {
+            border: 1px solid black;
+            padding: 5px 10px;
+            margin: 1px;
+        }
 
-            .box h2 {
-                border: 1px solid green;
-                text-align: center;
-                font-size: 30px;
-                padding: 10px 20px;
-                margin: 15px 0;
-            }
+        .box {
+            border: 1px solid red;
+            margin: 10px 5px;
+            padding: 15px 25px;
+        }
 
-            .box a {
-                border: 1px solid red;
-                font-size: 25px;
-                color: black;
-                text-decoration: none;
-                margin: 0 5px;
-            }
+        .box h2 {
+            border: 1px solid green;
+            text-align: center;
+            font-size: 30px;
+            padding: 10px 20px;
+            margin: 15px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-            .box a i {
-                border: 1px solid black;
-                margin: 1px;
-                padding: 1px 4px;
-            }
+        .box a {
+            border: 1px solid red;
+            font-size: 25px;
+            color: black;
+            text-decoration: none;
+            margin: 0 5px;
+        }
 
-            /* footer */
-            .footer {
-                border: 1px solid black;
-                /* add background-color here */
-            }
+        .box a i {
+            border: 1px solid black;
+            margin: 1px;
+            padding: 1px 4px;
+        }
 
-            .logomark {
-                border: 1px solid black;
-            }
+        /* footer */
+        .footer {
+            /* add background-color here */
+            background-color: #42210b;
+        }
 
-            #logomark-abbr {
-                border: 2px solid black;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                font-size: 45px;
-                font-weight: bold;
-            }
+        #icon-emails {
+            padding: 2px 3px;
+        }
 
-            #icon-emails {
-                border: 1px solid green;
-                padding: 2px 3px;
-            }
+        #icon-emails span {
+            display: block;
+            margin: 5px 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-            #icon-emails span {
-                border: 1px solid red;
-                display: block;
-                margin: 5px 1px;
-            }
+        #icon-emails span i {
+            padding: 1px;
+            margin-right: 4px;
+        }
 
-            #icon-emails span i {
-                border: 1px solid black;
-                padding: 1px;
-                margin-right: 4px;
-            }
+        .sm-icons {
+            padding: 6px 3px;
+        }
 
-            .sm-icons {
-                padding: 6px 3px;
-                border: 1px solid red;
-            }
+        .sm-icons h4 {
+            margin: 2px 0 10px;
+            text-transform: capitalize;
+            font-weight: normal;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-            .sm-icons h4 {
-                border: 1px solid black;
-                margin: 2px 0 10px;
-                text-transform: capitalize;
-                font-weight: normal;
-            }
+        .sm-icons a {
+            color: #f7921e;
+            display: inline-block;
+            margin: 0 2px;
+        }
 
-            .sm-icons a {
-                color: black;
-                display: inline-block;
-                border: 1px solid black;
-                margin: 0 2px;
-            }
+        .sm-icons a i {
+            font-size: 25px;
+        }
 
-            .sm-icons a i {
-                font-size: 25px;
-            }
+        #links-x2 {
+            padding: 4px 1px;
+        }
 
-            #links-x2 {
-                border: 2px solid red;
-                padding: 4px 1px;
-            }
+        #links-x2 h3 {
+            text-transform: capitalize;
+            margin: 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-            #links-x2 h3 {
-                border: 1px solid black;
-                font-weight: normal;
-                text-transform: capitalize;
-                margin: 1px;
-            }
+        #links-x2 ul {
+            margin: 2px 10px;
+        }
 
-            #links-x2 ul {
-                border: 1px solid black;
-                margin: 2px 10px;
-            }
+        #links-x2 ul li {
+            border-bottom: 1px dotted grey;
+            padding: 10px 0;
+            list-style-type: none;
+        }
 
-            #links-x2 ul li {
-                border-bottom: 1px dotted grey;
-                padding: 10px 0;
-                list-style-type: none;
-            }
+        #links-x2 ul li a {
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            color: #F2CD5C;
+        }
 
-            #links-x2 ul li a {
-                border: 1px solid black;
-                text-decoration: none;
-                text-transform: capitalize;
-                font-size: 16px;
-                color: black;
-                /* add a grey color border-bottom */
-            }
+        .footer #cpyrt-wrapper {
+            /* add background-color here */
+            background-color: #f7921e;
+            margin: 2px 1px 0;
+        }
 
-            .footer #cpyrt-wrapper {
-                /* add background-color here */
-                border: 1px solid red;
-                margin: 2px 1px 0;
-            }
+        .footer #cpyrt-wrapper p {
+            text-transform: capitalize;
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            /* add color here */
+            margin: 10px 5px;
+        }
+    </style>
+</head>
 
-            .footer #cpyrt-wrapper p{
-                text-transform: capitalize;
-                font-size: 14px;
-                text-align: center;
-                /* add color here */
-                margin: 10px 5px;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- TODOS: list of things to be done -->
-        <!-- list starts here -->
-        <!-- add logo at the top nav -->
-        <!-- edit the school name to Heights Technical University -->
-        <!-- fix the color and background-color wherever necessary -->
-        <!-- separate the html, css, and js files -->
-        <!-- ... -->
-        <!-- list ends here -->
+<body>
+    <!-- TODOS: list of things to be done -->
+    <!-- list starts here -->
+    <!-- add logo at the top nav -->
+    <!-- edit the school name to Heights Technical University -->
+    <!-- fix the color and background-color wherever necessary -->
+    <!-- separate the html, css, and js files -->
+    <!-- ... -->
+    <!-- list ends here -->
 
-        <!-- TODO: setup the basic front-end template -->
-        <div class="header"> <!-- this header is a fixed header -->
-            <p id="wordmark">ghtu</p>
-            <!-- the hamburger &#9776; html symbol should be substituted with a proper hamburger icon from fontawesome -->
-            <button onclick="(this.innerHTML == '&#9776;') ? openNav() : closeNav();" id="navbar-btn">&#9776;</button>
-            <div id="navbar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Admissions</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign up</a></li>
-                </ul>
-            </div>
+    <!-- TODO: setup the basic front-end template -->
+    <div class="header"> <!-- this header is a fixed header -->
+        <p id="wordmark">ghtu</p>
+        <!-- the hamburger &#9776; html symbol should be substituted with a proper hamburger icon from fontawesome -->
+        <button onclick="(this.innerHTML == '&#9776;') ? openNav() : closeNav();" id="navbar-btn">&#9776;</button>
+        <div id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Sign up</a></li>
+            </ul>
         </div>
-        <div id="post-header">
-            <!-- every content between the header and footer comes here -->
-            <div id="banner">
-                <h1 class="children">Undergraduate admissions</h1>
-                <h2 class="children">App. fee free february!</h2>
-                <p class="children">Apply for undergrad admissions for free from FEB 01 to FEB 15 using: <em>UGfreeFEB</em></p>
-                <div class="center-box">
-                    <a href="login-register.html" class="action-btn">apply now</a>
-                </div>
-            </div>
-            <div id="boxes">
-                <div class="box">
-                    <h2>Steps to apply</h2>
-                    <!-- add a right arrow icon as a link here -->
-                    <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="box">
-                    <h2>Required documents</h2>
-                    <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="box">
-                    <h2>Admissions list - 2023</h2>
-                    <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <!-- apply now button -->
+    </div>
+    <div id="post-header">
+        <!-- every content between the header and footer comes here -->
+        <div id="banner">
+            <h1 class="children">Undergraduate admissions</h1>
+            <h2 class="children">App. fee free february!</h2>
+            <p class="children">Apply for undergrad admissions for free from FEB 01 to FEB 15 using: <em>UGfreeFEB</em>
+            </p>
             <div class="center-box">
                 <a href="login-register.html" class="action-btn">apply now</a>
             </div>
         </div>
-        <div class="footer">
-            <div class="logomark">
-                <span id="logomark-abbr">ghtu</span>
-                <span id="logomark-txt">Groupheights<br><span>Technical University</span></span>
+        <div id="boxes">
+            <div class="box">
+                <h2>Steps to apply</h2>
+                <!-- add a right arrow icon as a link here -->
+                <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div id="icon-emails">
-                <span><i class="fa-regular fa-envelope"></i><small>info@groupheightstech.edu.ng</small></span>
-                <span><i class="fa-regular fa-envelope"></i><small>admissions@groupheightstech.edu.ng</small></span>
+            <div class="box">
+                <h2>Required documents</h2>
+                <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div class="sm-icons">
-                <h4>Connect with us</h4>
-                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <div id="links-x2">
-                <h3>Useful links</h3>
-                <ul>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">admissions</a></li>
-                    <li><a href="#">available courses</a></li>
-                    <li><a href="#">tuition fees</a></li>
-                    <li><a href="#">schorlaships</a></li>
-                    <li><a href="#">login</a></li>
-                </ul>
-            </div>
-            <div id="cpyrt-wrapper">
-                <p id="cpyrt">Copyright &copy; 2023 GroupHeights Technical University. All rights reserved</p>
+            <div class="box">
+                <h2>Admissions list - 2023</h2>
+                <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
+        <!-- apply now button -->
+        <div class="center-box">
+            <a href="login-register.html" class="action-btn">apply now</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="icon-emails">
+            <span><i class="fa-regular fa-envelope"></i><small>info@groupheightstech.edu.ng</small></span>
+            <span><i class="fa-regular fa-envelope"></i><small>admissions@groupheightstech.edu.ng</small></span>
+        </div>
+        <div class="sm-icons">
+            <h4>Connect with us</h4>
+            <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div id="links-x2">
+            <h3>Useful links</h3>
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">admissions</a></li>
+                <li><a href="#">available courses</a></li>
+                <li><a href="#">tuition fees</a></li>
+                <li><a href="#">schorlaships</a></li>
+                <li><a href="#">login</a></li>
+            </ul>
+        </div>
+        <div id="cpyrt-wrapper">
+            <p id="cpyrt">Copyright &copy; 2023 GroupHeights Technical University. All rights reserved</p>
+        </div>
+    </div>
 
-        <script>
-            // todo
-            console.log("Hello World!");
+    <script>
+        // todo
+        console.log("Hello World!");
 
-            var item1 = document.getElementById('navbar');
-            var item2 = document.getElementById('navbar-btn');
-            var x = document.getElementById('post-header');
+        var item1 = document.getElementById('navbar');
+        var item2 = document.getElementById('navbar-btn');
+        var x = document.getElementById('post-header');
 
-            function openNav() {
-                item1.style.display = "block";
-                item2.innerHTML = "&#9747;";
+        function openNav() {
+            item1.style.display = "block";
+            item2.innerHTML = "&#9747;";
 
-                console.log("nav opened!");
-            }
+            console.log("nav opened!");
+        }
 
-            function closeNav() {
-                item1.style.display = "none";
-                x.style.zIndex = "1";
-                item2.innerHTML = "&#9776;";
+        function closeNav() {
+            item1.style.display = "none";
+            x.style.zIndex = "1";
+            item2.innerHTML = "&#9776;";
 
-                console.log("nav closed!");
-            }
-        </script>
-    </body>
+            console.log("nav closed!");
+        }
+    </script>
+</body>
+
 </html>
