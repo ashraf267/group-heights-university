@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login/Register | GHTU</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/c84a86a0b9.js" crossorigin="anonymous"></script>
+        <style>
+            #header {
+                border: 1px solid black;
+                padding: 2px 3px;
+                /* add background-color here */
+            }
+
+            #header h1 {
+                border: 1px solid red;
+                text-align: center;
+                padding: 5px;
+                text-transform: capitalize;
+            }
+
+            #header a {
+                border: 1px solid red;
+                text-align: center;
+                font-size: 20px;
+                text-decoration: none;
+            }
+
+            #header a i {
+                border: 1px solid black;
+                margin: 1px;
+            }
+
+            form {
+                border: 1px solid red;
+                margin: 20px 5px 1px;
+                padding: 5px;
+            }
+
+            label {
+                display: block;
+            }
+
+            /* .submit-btn */
+            .submit-btn {
+                background-color: transparent; /* set background-color */
+                border: 1px solid black;
+                margin: 5px 10px;
+                font-size: 17px;
+                padding: 5px 3px;
+            }
+
+            .submit-btn i {
+                border: 1px solid red;
+                margin-left: 2px;
+                padding: 2px 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1>UG-Admissions portal</h1>
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <!-- login form -->
+        <form id="form1">
+            <fieldset>
+                <legend>Login here, if you already have an account</legend>
+                <label for="uname">Username:</label>
+                <input type="text" class="fields" id="uname" name="uname" required>
+                <label for="">Password:</label>
+                <input type="password" class="fields" id="psw" name="psw" required>
+            </fieldset>
+        </form>
+        <button type="submit" form="form1" class="submit-btn">Login<i class="fa-solid fa-arrow-right"></i></button>
+
+        <!-- register form -->
+        <form id="form2">
+            <fieldset>
+                <legend>Create new account here</legend>
+                <label for="uname">Username:</label>
+                <input type="text" class="fields" id="uname" name="uname" required>
+                <label for="fname">Firstname:</label>
+                <input type="text" class="fields" id="fname" name="fname" required>
+                <label for="lname">Lastname:</label>
+                <input type="text" class="fields" id="lname" name="lname" required>
+                <label for="email">Email:</label>
+                <input type="email" class="fields" id="email" name="email" required>
+                <label for="psw">Password:</label>
+                <input type="password" class="fields" id="psw" name="psw" required>
+                <label for="re-psw">Re-enter Password:</label>
+                <input type="password" class="fields" id="re-psw" name="re-psw">
+            </fieldset>
+        </form>
+        <button type="submit" form="form2" class="submit-btn">Register<i class="fa-solid fa-check"></i></button>
+    </body>
+</html>
